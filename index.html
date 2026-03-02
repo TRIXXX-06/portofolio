@@ -22,6 +22,7 @@ html{
 body{
     background:#ffffff;
     color:#111;
+    overflow-x:hidden;
 }
 
 nav{
@@ -84,6 +85,9 @@ nav{
 
 .hero-buttons{
     margin-top:40px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
 }
 
 .btn{
@@ -91,8 +95,9 @@ nav{
     border-radius:30px;
     text-decoration:none;
     font-weight:600;
-    margin-right:20px;
     transition:.3s;
+    display:inline-block;
+    text-align:center;
 }
 
 .btn-primary{
@@ -120,10 +125,11 @@ nav{
     width:380px;
     height:480px;
     object-fit:cover;
-    object-position: center bottom;
+    object-position:center bottom;
     border-radius:20px;
     box-shadow:0 25px 50px rgba(0,0,0,0.15);
     transition:.4s;
+    max-width:100%;
 }
 
 .hero-image img:hover{
@@ -213,7 +219,9 @@ footer{
     transform:translateY(0);
 }
 
+
 @media(max-width:1000px){
+
     .hero{
         flex-direction:column;
         text-align:center;
@@ -232,137 +240,44 @@ footer{
         height:320px;
     }
 
-img {
-  max-width: 100%;
-  height: auto;
 }
 
-* {
-  max-width: 100%;
-  box-sizing: border-box;
-}
+@media (max-width:600px){
 
-@media (max-width: 992px) {
-  .container,
-  .wrapper,
-  .content {
-    width: 95% !important;
-    margin: auto !important;
-  }
+    section{
+        padding:80px 20px;
+    }
 
-  .row,
-  .flex,
-  .navbar {
-    flex-wrap: wrap !important;
-  }
-}
+    .hero-text h1{
+        font-size:42px;
+    }
 
-@media (max-width: 576px) {
+    .hero-text h2{
+        font-size:36px;
+    }
 
-  body {
-    overflow-x: hidden;
-  }
+    .hero-buttons{
+        flex-direction:column;
+        align-items:center;
+    }
 
-  .container,
-  .wrapper,
-  .content {
-    width: 100% !important;
-    padding: 15px !important;
-  }
+    .hero-buttons .btn{
+        width:100%;
+        max-width:280px;
+    }
 
-  .row,
-  .flex,
-  .navbar {
-    flex-direction: column !important;
-    align-items: center !important;
-  }
+    .projects{
+        grid-template-columns:1fr;
+    }
 
-  .card,
-  .box,
-  .item {
-    width: 100% !important;
-    margin-bottom: 15px !important;
-  }
+    .project-card{
+        width:100%;
+    }
 
-  button,
-  input,
-  select,
-  textarea {
-    width: 100% !important;
-  }
-
-  h1 {
-    font-size: 22px !important;
-  }
-
-  h2 {
-    font-size: 20px !important;
-  }
-
-  p {
-    font-size: 14px !important;
-  }
-  @media (max-width: 576px) {
-
-  .project-card,
-  .card-project,
-  .project-item {
-    width: 100% !important;
-    margin-bottom: 20px !important;
-  }
-
-  .project-container,
-  .project-row {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 20px !important;
-  }
-
-  .project-button,
-  .btn-project,
-  .view-project {
-    width: 100% !important;
-    text-align: center !important;
-    margin-top: 10px !important;
-  }
-
-  .project-action,
-  .project-footer {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 10px !important;
-  }
-
-}
-}
-@media (max-width: 600px){
-
-  section{
-    padding:80px 20px !important;
-  }
-
-  .projects{
-    display:grid !important;
-    grid-template-columns:1fr !important;
-  }
-
-  .project-card{
-    width:100% !important;
-  }
-
-  .project-card h3{
-    font-size:18px !important;
-  }
-
-  .project-card p{
-    font-size:14px !important;
-  }
-
-}
 }
 </style>
 </head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <body>
 
 <nav>
